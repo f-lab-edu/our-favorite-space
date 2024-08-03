@@ -6,6 +6,10 @@ class CreateUseCase(ABC):
     def create(self) -> None:
         pass
 
+    @abstractmethod
+    def create_admin(self) -> None:
+        pass
+
 
 class GetInfoUseCase(ABC):
     @abstractmethod
@@ -16,4 +20,10 @@ class GetInfoUseCase(ABC):
 class ModifyUseCase(ABC):
     @abstractmethod
     def modify(self, id: int) -> None:
+        pass
+
+
+class DeleteUseCase(ABC):
+    @abstractmethod
+    def delete(self, id: int) -> None:
         pass
