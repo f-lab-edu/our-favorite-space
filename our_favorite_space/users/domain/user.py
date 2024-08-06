@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from our_favorite_space.users.domain.type import EventTime, UserType
+from our_favorite_space.users.vo.type import EventTime, UserType
 
 
 @dataclass
