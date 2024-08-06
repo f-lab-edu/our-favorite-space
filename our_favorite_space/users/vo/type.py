@@ -3,6 +3,7 @@ from enum import Enum
 
 
 class UserType(Enum):
+    SERVER = 0
     SUPER_ADMIN = 1
     COMPANY_ADMIN = 2
     NORMAL = 3
