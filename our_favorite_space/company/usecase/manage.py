@@ -17,7 +17,7 @@ class GetInfoUseCase(ABC):
 
 class ModifyUseCase(ABC):
     @abstractmethod
-    def modify(self, name: str) -> Company:
+    def modify(self, name: str, **data) -> Company:
         pass
 
 
