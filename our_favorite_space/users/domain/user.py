@@ -1,5 +1,6 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
+from our_favorite_space.company.domain.company import Company
 from our_favorite_space.users.vo.type import EventTime, UserType
 
 
@@ -8,5 +9,5 @@ class User:
     id: int
     name: str
     type: UserType
-    company: str
-    event_times: list[EventTime]
+    company: Company
+    event_times: list[EventTime] = field(default_factory=list)
