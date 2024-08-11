@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
 
+from our_favorite_space.message.domain.message import Message
+
 
 class SendUseCase(ABC):
     @abstractmethod
@@ -9,5 +11,5 @@ class SendUseCase(ABC):
 
 class GetInfoUseCase(ABC):
     @abstractmethod
-    def get_info(self, id: int) -> None:
+    def get_info(self, id: int) -> Message:
         pass
