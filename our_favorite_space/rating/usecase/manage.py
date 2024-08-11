@@ -1,15 +1,17 @@
 from abc import ABC, abstractmethod
 
+from our_favorite_space.rating.domain.rating import Rating
+
 
 class CreateUseCase(ABC):
     @abstractmethod
-    def create(self) -> None:
+    def create(self) -> Rating:
         pass
 
 
 class GetInfoUseCase(ABC):
     @abstractmethod
-    def get_info(self, id: int) -> None:
+    def get_info(self, id: int) -> Rating:
         pass
 
 
