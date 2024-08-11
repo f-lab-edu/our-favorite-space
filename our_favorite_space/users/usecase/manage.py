@@ -1,25 +1,27 @@
 from abc import ABC, abstractmethod
 
+from our_favorite_space.users.domain.user import User
+
 
 class CreateUseCase(ABC):
     @abstractmethod
-    def create(self) -> None:
+    def create(self) -> User:
         pass
 
     @abstractmethod
-    def create_admin(self) -> None:
+    def create_admin(self) -> User:
         pass
 
 
 class GetInfoUseCase(ABC):
     @abstractmethod
-    def get_info(self, id: int) -> None:
+    def get_info(self, id: int) -> User:
         pass
 
 
 class ModifyUseCase(ABC):
     @abstractmethod
-    def modify(self, id: int) -> None:
+    def modify(self, id: int) -> User:
         pass
 
 
