@@ -1,21 +1,23 @@
 from abc import ABC, abstractmethod
 
+from our_favorite_space.company.domain.company import Company
+
 
 class CreateUseCase(ABC):
     @abstractmethod
-    def create(self) -> None:
+    def create(self) -> Company:
         pass
 
 
 class GetInfoUseCase(ABC):
     @abstractmethod
-    def get_info(self, id: int) -> None:
+    def get_info(self, id: int) -> Company:
         pass
 
 
 class ModifyUseCase(ABC):
     @abstractmethod
-    def modify(self, id: int) -> None:
+    def modify(self, id: int) -> Company:
         pass
 
 
