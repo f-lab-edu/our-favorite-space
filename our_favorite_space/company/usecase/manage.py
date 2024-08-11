@@ -11,17 +11,17 @@ class CreateUseCase(ABC):
 
 class GetInfoUseCase(ABC):
     @abstractmethod
-    def get_info(self, id: int) -> Company:
+    def get_info(self, name: str) -> Company:
         pass
 
 
 class ModifyUseCase(ABC):
     @abstractmethod
-    def modify(self, id: int) -> Company:
+    def modify(self, name: str) -> Company:
         pass
 
 
 class DeleteUseCase(ABC):
     @abstractmethod
-    def delete(self, id: int) -> None:
+    def delete(self, name: str) -> None:
         pass
