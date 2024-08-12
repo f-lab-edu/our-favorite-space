@@ -5,11 +5,11 @@ from our_favorite_space.users.domain.user import User
 
 class CreateUseCase(ABC):
     @abstractmethod
-    def create(self) -> User:
+    def create(self, name: str, company_id: int) -> User:
         pass
 
     @abstractmethod
-    def create_admin(self) -> User:
+    def create_admin(self, name: str, company_id: int) -> User:
         pass
 
 
@@ -21,7 +21,7 @@ class GetInfoUseCase(ABC):
 
 class ModifyUseCase(ABC):
     @abstractmethod
-    def modify(self, id: int) -> User:
+    def modify(self, id: int, **data) -> User:
         pass
 
 
