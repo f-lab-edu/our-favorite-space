@@ -4,13 +4,14 @@ from our_favorite_space.users.ports.outbound_port import (
     LoadUserOutboundPort,
     SaveUserOutboundPort,
 )
+from our_favorite_space.users.usecase.command import SetEventTimeUseCase
 from our_favorite_space.users.usecase.manage import (
     CreateUseCase,
     DeleteUseCase,
     GetInfoUseCase,
     ModifyUseCase,
 )
-from our_favorite_space.users.vo.type import UserType
+from our_favorite_space.users.vo.type import EventTime, EventTimeType, UserType
 
 
 class UserCreateInboundPort(CreateUseCase):
@@ -67,3 +68,25 @@ class UserDeleteInboundPort(DeleteUseCase):
     def delete(self, id: int) -> None:
         user = self.load_user_port.get(id)
         self.load_user_port.delete(user)
+
+
+class UserEventTimeSetInboundPort(SetEventTimeUseCase):
+    def __init__(
+        self, load_user_port: LoadUserOutboundPort, save_user_port: SaveUserOutboundPort
+    ):
+        self.load_user_port = load_user_port
+        self.save_user_port = save_user_port
+
+    def set(
+        self,
+        user: User,
+        event_time_type: EventTimeType,
+        hour: int,
+        min: int,
+        weekday: set[int],
+    ) -> User:
+        user = self.load_user_port.get(user.id)
+        user.event_times[event_time_type] = EventTime(
+            hour=hour, min=min, weekday=weekday
+        )
+        return self.save_user_port.save(user)
