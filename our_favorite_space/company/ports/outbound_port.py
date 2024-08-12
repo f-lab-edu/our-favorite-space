@@ -4,7 +4,7 @@ from our_favorite_space.company.domain.company import Company
 
 
 class LoadCompanyOutboundPort(ABC):
-    def get(self, company: str) -> Company:
+    def get(self, id: int) -> Company:
         pass
 
 

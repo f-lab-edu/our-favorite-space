@@ -25,8 +25,8 @@ class CompanyGetInfoInboundPort(GetInfoUseCase):
     def __init__(self, load_company_port: LoadCompanyOutboundPort):
         self.load_company_port = load_company_port
 
-    def get_info(self, name: str) -> Company:
-        return self.load_company_port.get(name)
+    def get_info(self, id: int) -> Company:
+        return self.load_company_port.get(id)
 
 
 class CompanyModifyInboundPort(ModifyUseCase):
@@ -38,8 +38,8 @@ class CompanyModifyInboundPort(ModifyUseCase):
         self.load_company_port = load_company_port
         self.save_company_port = save_company_port
 
-    def modify(self, name: str, **data) -> Company:
-        company = self.load_company_port.get(name)
+    def modify(self, id: int, **data) -> Company:
+        company = self.load_company_port.get(id)
 
         for key, value in data.items():
             if hasattr(company, key):
@@ -57,6 +57,6 @@ class CompanyDeleteInboundPort(DeleteUseCase):
         self.load_company_port = load_company_port
         self.delete_company_port = delete_company_port
 
-    def delete(self, name: str) -> None:
-        company = self.load_company_port.get(name)
+    def delete(self, id: int) -> None:
+        company = self.load_company_port.get(id)
         self.delete_company_port.delete(company)
