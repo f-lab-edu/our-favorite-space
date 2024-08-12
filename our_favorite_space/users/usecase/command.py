@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
-from our_favorite_space.users.domain.user import User
-from our_favorite_space.users.vo.type import EventTime, EventTimeType
+from users.domain.user import User
+from users.vo.type import EventTimeType
 
 
 class SetEventTimeUseCase(ABC):

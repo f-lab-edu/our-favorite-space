@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from our_favorite_space.rating.domain.rating import Rating
+from rating.domain.rating import Rating
 
 
 class CreateUseCase(ABC):

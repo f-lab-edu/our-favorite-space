@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 
-from our_favorite_space.company.domain.company import Company
-from our_favorite_space.users.vo.type import EventTime, UserType
+from company.domain.company import Company
+from users.vo.type import EventTime, UserType
 
 
 @dataclass

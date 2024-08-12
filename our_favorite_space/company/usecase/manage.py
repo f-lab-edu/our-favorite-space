@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from our_favorite_space.company.domain.company import Company
+from company.domain.company import Company
 
 
 class CreateUseCase(ABC):

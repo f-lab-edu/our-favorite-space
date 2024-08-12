@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from our_favorite_space.space.vo.type import SpaceType
+from space.vo.type import SpaceType
 
 
 @dataclass

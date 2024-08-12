@@ -1,10 +1,10 @@
-from our_favorite_space.company.domain.company import Company
-from our_favorite_space.company.ports.outbound_port import (
+from company.domain.company import Company
+from company.ports.outbound_port import (
     DeleteCompanyOutboundPort,
     LoadCompanyOutboundPort,
     SaveCompanyOutboundPort,
 )
-from our_favorite_space.company.usecase.manage import (
+from company.usecase.manage import (
     CreateUseCase,
     DeleteUseCase,
     GetInfoUseCase,

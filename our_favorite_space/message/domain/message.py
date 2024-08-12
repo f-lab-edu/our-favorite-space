@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
-from our_favorite_space.message.vo.type import MessageType
-from our_favorite_space.users.domain.user import User
+from message.vo.type import MessageType
+from users.domain.user import User
 
 
 @dataclass

@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from our_favorite_space.space.domain.space import Space
+from space.domain.space import Space
 
 
 class CreateUseCase(ABC):

@@ -1,17 +1,14 @@
-from our_favorite_space.company.ports.outbound_port import LoadCompanyOutboundPort
-from our_favorite_space.users.domain.user import User
-from our_favorite_space.users.ports.outbound_port import (
-    LoadUserOutboundPort,
-    SaveUserOutboundPort,
-)
-from our_favorite_space.users.usecase.command import SetEventTimeUseCase
-from our_favorite_space.users.usecase.manage import (
+from company.ports.outbound_port import LoadCompanyOutboundPort
+from users.domain.user import User
+from users.ports.outbound_port import LoadUserOutboundPort, SaveUserOutboundPort
+from users.usecase.command import SetEventTimeUseCase
+from users.usecase.manage import (
     CreateUseCase,
     DeleteUseCase,
     GetInfoUseCase,
     ModifyUseCase,
 )
-from our_favorite_space.users.vo.type import EventTime, EventTimeType, UserType
+from users.vo.type import EventTime, EventTimeType, UserType
 
 
 class UserCreateInboundPort(CreateUseCase):

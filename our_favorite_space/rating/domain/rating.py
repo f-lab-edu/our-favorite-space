@@ -1,10 +1,7 @@
 from dataclasses import dataclass
 
-from our_favorite_space.rating.vo.comment import (
-    RecreationRatingData,
-    RestaurantRatingData,
-)
-from our_favorite_space.users.domain.user import User
+from rating.vo.comment import RecreationRatingData, RestaurantRatingData
+from users.domain.user import User
 
 
 @dataclass

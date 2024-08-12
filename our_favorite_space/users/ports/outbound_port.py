@@ -1,6 +1,6 @@
 from abc import ABC
 
-from our_favorite_space.users.domain.user import User
+from users.domain.user import User
 
 
 class LoadUserOutboundPort(ABC):

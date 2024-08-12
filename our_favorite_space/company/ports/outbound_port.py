@@ -1,6 +1,6 @@
 from abc import ABC
 
-from our_favorite_space.company.domain.company import Company
+from company.domain.company import Company
 
 
 class LoadCompanyOutboundPort(ABC):
