@@ -5,4 +5,4 @@ from dataclasses import dataclass
 class Company:
     id: int
     name: str
-    email_domin: str
+    email_domain: str
