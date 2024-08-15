@@ -8,3 +8,4 @@ class Space:
     name: str
     description: str
     type: SpaceType
+    id: int = None

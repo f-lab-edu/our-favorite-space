@@ -11,3 +11,4 @@ class Rating:
     space: Space
     data: RestaurantRatingData | RecreationRatingData
     comment: str
+    id: int = None
