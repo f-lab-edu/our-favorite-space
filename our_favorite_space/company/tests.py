@@ -69,4 +69,5 @@ class CompanyDeleteInboundPortTestCase(BaseCompanyInboundPortTest):
         )
         inbound_port.delete(1)
 
-        self.delete_company_port.delete.assert_called_once_with(1)
+        # 삭제 Method의 Call이 동작했었는지 확인
+        self.delete_company_port.delete.assert_called_once_with(self.company)
