@@ -1,11 +1,11 @@
 from abc import ABC, abstractmethod
 
-from our_favorite_space.company.domain.company import Company
+from company.domain.company import Company
 
 
 class CreateUseCase(ABC):
     @abstractmethod
-    def create(self) -> Company:
+    def create(self, name: str, email_domain: str) -> Company:
         pass
 
 
@@ -17,7 +17,7 @@ class GetInfoUseCase(ABC):
 
 class ModifyUseCase(ABC):
     @abstractmethod
-    def modify(self, id: int) -> Company:
+    def modify(self, id: int, **data) -> Company:
         pass
 
 

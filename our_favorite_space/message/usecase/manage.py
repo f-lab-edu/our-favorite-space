@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from our_favorite_space.message.domain.message import Message
+from message.domain.message import Message
 
 
 class SendUseCase(ABC):

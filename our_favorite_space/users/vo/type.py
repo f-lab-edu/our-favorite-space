@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from enum import Enum
 
+from pydantic import conint
+
 
 class UserType(Enum):
     SERVER = 0
@@ -15,7 +17,6 @@ class EventTimeType(Enum):
 
 @dataclass(frozen=True)
 class EventTime:
-    type: EventTimeType
     hour: int
     min: int
-    weekday: list[int]
+    weekday: set[conint(ge=0, le=6)]

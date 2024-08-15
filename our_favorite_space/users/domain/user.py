@@ -1,12 +1,13 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
-from our_favorite_space.users.vo.type import EventTime, UserType
+from company.domain.company import Company
+from users.vo.type import EventTime, UserType
 
 
 @dataclass
 class User:
-    id: int
     name: str
     type: UserType
-    company: str
-    event_times: list[EventTime]
+    company: Company
+    event_times: dict[str, EventTime] = field(default_factory=dict)
+    id: int = None
